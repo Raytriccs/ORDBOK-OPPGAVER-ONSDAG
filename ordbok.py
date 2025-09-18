@@ -1,10 +1,22 @@
-# Oppgave 4 
-def sok():
-    navn_sok = input("Skriv inn navnet du vil søke etter: ")
-    funnet = False
-    for person in telefonbok:
-        if person["navn"].lower() == navn_sok.lower():
-            print(f'{person["navn"]}: {person["nummer"]}')
-            funnet = True
-    if not funnet:
-        print("Fant ingen med det navnet.")
+# Oppgave 5 
+def hovedmeny():
+    while True:
+        print("\nMeny:")
+        print("1. Vis alle")
+        print("2. Legg til ny")
+        print("3. Søk")
+        print("4. Avslutt")
+        valg = input("Velg et tall: ")
+
+        if valg == "1":
+            vis_alle()
+        elif valg == "2":
+            legg_til()
+        elif valg == "3":
+            sok()
+        elif valg == "4":
+            print("Avslutter programmet.")
+            break
+        else:
+            print("Ugyldig valg, prøv igjen.")
+
