@@ -1,9 +1,10 @@
-# Steg 1 
-telefonbok = []
 
-person1 = {"navn": "Ada Lovelace", "nummer": "12345678"}
-person2 = {"navn": "Linus Torvalds", "nummer": "98765432"}
 
-telefonbok.append(person1)
-telefonbok.append(person2)
+# Steg 2 
+def vis_alle():
+    if len(telefonbok) == 0:
+        print("Telefonboka er tom.")
+    else:
+        for person in telefonbok:
+            print(f'{person["navn"]}: {person["nummer"]}')
 
